@@ -1,8 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
-    mode: 'development',
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -15,11 +16,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-  new HtmlWebpackPlugin({
-    title: 'Development',
-    template: 'src/index.html',
-  }),
-],
+    new HtmlWebpackPlugin({
+      title: 'Development',
+      template: 'src/index.html',
+    }),
+  ],
   module: {
     rules: [
       {
