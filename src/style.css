@@ -1,11 +1,74 @@
+html{  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body
+{
+    min-height: 100%;
+   
+}
+
+.clearsky
+{
+    background-image: url(./images/clearsky.jpg); 
+    background-size: 100% 100%;
+    
+}
+.rainy
+{
+    background-image: url(./images/rainy.jpg); 
+    background-size: 100% 100%;
+}
+
+.sunny
+{
+    background-image: url(./images/rainy.jpg); 
+    background-size: 100% 100%; 
+}
+.foggy
+{
+    background-image: url(./images/rainy.jpg);
+    background-size: 100% 100%;     
+}
+.cloudy
+{
+    background-image: url(./images/rainy.jpg); 
+    background-size: 100% 100%; 
+}
+h1,h5,h6,p
+{
+    padding-left: 30%;
+}
+    
+.card
+{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10rem;
+    margin-right: 30%;
+    color: black;
+    background-color: rgba(245, 245, 245, 1);
+    opacity: .6;
+}
+.background_sunny
+{
+    background-image: url(./images/cloudy.jpg);
+    background-size: 100% 100%;
+}
+
 .footer
 {
     bottom: 0;
    position: absolute;
     background-color: black;
     width: 100%;
-}
-.content
-{
-    background-image: 
+    margin: 0;
+    height: 3rem;
 }
