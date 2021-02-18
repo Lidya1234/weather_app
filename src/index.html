@@ -8,29 +8,43 @@
     
     <title>Weather Application</title>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body >
+  
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
      
       
-        <form class="navbar-form navbar-left" >
+        <div class="navbar-form navbar-left" >
           <div class="input-group">
             <input type="text" class="form-control" id="city" placeholder="Search city weather">
             <div class="input-group-btn">
-              <button class="btn btn-default submit" type="submit">
+              <button class="btn btn-default submit bg-light" type="submit">
                 <i class="fas fa-search"></i>
               </button>
             </div>
           </div>
-        </form>
+        </div>
       
     </div>
   </nav>
   <div class="content">
-<p> Hiii</p>
+    <template class="template">
+    <div class="card">
+      <div class="card-body pl-3">
+        <h1 class="card-title pl-4 weather"></h1>
+        <h6 class="card-subtitle mb-2 text-muted country"></h6>
+        <p class="card-text temp"></p>
+        <p class="card-text feel"></p>
+        <p class="card-text humidity"></p>
+        <p class="card-text wind-speed"></p>
+      
+      </div>
+    </div>
+  </template>
   </div>
+
   <footer>
-    <p class="footer">copy right </p>
+    <p class="footer">Copy right  reserved: Lidya G @2021</p>
   </footer>
   <script src="https://kit.fontawesome.com/5b1eeceadd.js" crossorigin="anonymous"></script>
 </body>
