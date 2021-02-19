@@ -20,6 +20,7 @@ const fetchWeather = async (city) => {
     return 400;
   }
   const weatherdata = await response.json();
+
   return weatherdata;
 };
 

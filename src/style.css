@@ -13,6 +13,7 @@ html {
 
 body {
   min-height: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .clearsky {
@@ -48,9 +49,9 @@ p {
 }
 
 .card {
-  width: 40%;
-  margin-left: 30%;
-  margin-top: 10rem;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 4rem;
   margin-right: 30%;
   color: black;
   background-color: rgba(245, 245, 245, 1);

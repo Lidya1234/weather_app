@@ -1,9 +1,17 @@
 # weatherapp
-
-This is a weather fore cast application.It uses an open weather data website api to get the data.It diplayes the the weather and the background image which represents the weather.It takes the city name as an input. 
-Use this api with your api key https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=[API-KEY]&units=metric
+This is a weather forecast application.  It uses an open weather data website API to get the data. It displays the weather and the background image which represents the weather. It takes the city name as an input. 
 
 <img src="./src/images/Capture.PNG">
+
+## How to use the API
+- Open https://openweathermap.org/ website
+- Sign up/Sign in  for that website using the link at the top left corner
+- Then your user name will appear in the top left corner with a drop-down button, click that you will see a My API Keys menu, then you can get the key from the keys section which opens the app when the menu is clicked.
+- To see how to use it:- under the Current Weather Data section click the API doc button
+For example
+Use this api with your api key https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=[API-KEY]&units=metric
+
+
 
 ## Built With
 

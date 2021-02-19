@@ -20,6 +20,11 @@ const getBackground = (cityweather) => {
   }
 };
 
+const getFahrenheit = (temp) => {
+  const fahrenheit = Math.round((temp * (9 / 5)) + 32);
+  return fahrenheit;
+};
+
 const clearList = (list) => {
   while (list.firstChild) {
     list.removeChild(list.firstChild);
@@ -35,11 +40,12 @@ const display = (cityweather) => {
   const humidity = weatherTemplate.querySelector('.humidity');
   const windSpeed = weatherTemplate.querySelector('.wind-speed');
   getBackground(cityweather);
-
+  const fTemp = getFahrenheit(cityweather.main.temp);
+  const fFeels = getFahrenheit(cityweather.main.feels_like);
   weather.textContent = `${cityweather.name},${cityweather.sys.country}`;
-  temp.textContent = `Temprature:${cityweather.main.temp}°C`;
-  place.textContent = `Weather: ${cityweather.weather[0].main}`;
-  feelsLike.textContent = `Feels_Like:  ${cityweather.main.feels_like}°C`;
+  temp.textContent = `Temprature:${cityweather.main.temp}°C / ${fTemp}°F`;
+  place.textContent = `Weather: ${cityweather.weather[0].description}`;
+  feelsLike.textContent = `Feels_Like:  ${cityweather.main.feels_like}°C / ${fFeels}°F`;
   humidity.textContent = `Humidity:  ${cityweather.main.humidity}%`;
   windSpeed.textContent = `Wind speed:  ${cityweather.wind.speed} MPH`;
   content.appendChild(weatherTemplate);
