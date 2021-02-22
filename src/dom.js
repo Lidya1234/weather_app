@@ -30,22 +30,45 @@ const clearList = (list) => {
     list.removeChild(list.firstChild);
   }
 };
+const setUnit = (temprature, btn, temp, string) => {
+  if (btn.textContent === '°C') {
+    temp.textContent = `${string}   ${temprature}°C`;
+
+    btn.textContent = '°F';
+  } else {
+    temp.textContent = `${string}   ${getFahrenheit(temprature)}°F`;
+    btn.textContent = '°C';
+  }
+};
 const display = (cityweather) => {
   clearList(content);
   const weatherTemplate = document.importNode(template.content, true);
   const weather = weatherTemplate.querySelector('.weather');
   const place = weatherTemplate.querySelector('.country');
   const temp = weatherTemplate.querySelector('.temp');
+  const toggle = weatherTemplate.querySelector('.toggle');
+  const feelToggle = weatherTemplate.querySelector('.feel_toggle');
   const feelsLike = weatherTemplate.querySelector('.feel');
   const humidity = weatherTemplate.querySelector('.humidity');
   const windSpeed = weatherTemplate.querySelector('.wind-speed');
   getBackground(cityweather);
-  const fTemp = getFahrenheit(cityweather.main.temp);
-  const fFeels = getFahrenheit(cityweather.main.feels_like);
+
+
+  const stringT = 'Temprature: ';
+  const stringF = 'Feels_Like: ';
+  toggle.addEventListener('click', () => {
+    setUnit(cityweather.main.temp, toggle, temp, stringT);
+  });
+  feelToggle.addEventListener('click', () => {
+    setUnit(cityweather.main.feels_like, feelToggle, feelsLike, stringF);
+  });
+
+  toggle.textContent = '°F';
+  feelToggle.textContent = '°F';
   weather.textContent = `${cityweather.name},${cityweather.sys.country}`;
-  temp.textContent = `Temprature:${cityweather.main.temp}°C / ${fTemp}°F`;
+  temp.textContent = `Temprature:${cityweather.main.temp}°C`;
   place.textContent = `Weather: ${cityweather.weather[0].description}`;
-  feelsLike.textContent = `Feels_Like:  ${cityweather.main.feels_like}°C / ${fFeels}°F`;
+  feelsLike.textContent = `Feels_Like:  ${cityweather.main.feels_like}°C`;
   humidity.textContent = `Humidity:  ${cityweather.main.humidity}%`;
   windSpeed.textContent = `Wind speed:  ${cityweather.wind.speed} MPH`;
   content.appendChild(weatherTemplate);
