@@ -64,6 +64,11 @@ p {
   height: 30px;
 }
 
+.btns {
+  height: 30px;
+  margin-left: 20px;
+}
+
 .footer {
   bottom: 0;
   position: absolute;
