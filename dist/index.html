@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    
+    <title>Weather Application</title>
+<script defer src="main.js"></script></head>
+<body >
+  
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+     
+      
+        <div class="navbar-form navbar-left" >
+          <div class="input-group">
+            <input type="text" class="form-control" id="city" placeholder="Search city weather">
+            <div class="input-group-btn">
+              <button class="btn btn-default submit bg-light" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+  <div class="err">
+    <p class="error_msg bg-danger"></p>
+  </div>
+  <div class="content">
+    <template class="template">
+    <div class="card">
+      <div class="card-body pl-3">
+        <h1 class="card-title pl-4 weather"></h1>
+        <h6 class="card-subtitle mb-2  country"></h6>
+
+        <div class="d-flex">
+        <p class="card-text temp"></p>
+        <button class="card-text btns toggle"></button>
+        </div>
+        <div class="d-flex">
+          <p class="card-text feel"></p>
+          <button class="card-text btns feel_toggle"></button>
+          </div>
+      
+        <p class="card-text humidity"></p>
+        <p class="card-text wind-speed"></p>
+      
+      </div>
+    </div>
+  </template>
+  </div>
+
+  <footer>
+    <p class="footer">Copy right  reserved: Lidya G @2021</p>
+  </footer>
+  <script src="https://kit.fontawesome.com/5b1eeceadd.js" crossorigin="anonymous"></script>
+</body>
+</html>
